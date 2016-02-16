@@ -1,0 +1,146 @@
+% resume.tex
+%
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003 David J. Grant <dgrant@ieee.org> http://www.davidgrant.ca
+% (c) 2007 Todd C. Miller <Todd.Miller@courtesan.com> http://www.courtesan.com/todd
+% (c) 2009 Derek R. Hildreth <derek@derekhildreth.com> http://www.derekhildreth.com 
+%This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/1.0/ or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.
+
+% GENERAL NOTE:  There may be some notes specific to myself.  If you're only interested in my LaTeX source or it doesn't make sense, please disregard it.
+
+\documentclass[letterpaper,11pt]{article}
+
+%-----------------------------------------------------------
+\usepackage{fontspec}
+\setmainfont{Adobe Garamond Pro}
+\usepackage[empty]{fullpage}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks,%
+  citecolor=black,%
+  filecolor=black,%
+  linkcolor=black,%
+  urlcolor=blue     % can put red here to visualize the links
+}
+\urlstyle{same}
+\definecolor{mygrey}{gray}{.85}
+\definecolor{mygreylink}{gray}{.30}
+\textheight=9.0in
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{0.375in}
+\addtolength{\textwidth}{0.5in}
+\addtolength{\topmargin}{-.375in}
+\addtolength{\textheight}{0.75in}
+
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{{\large\colorbox{mygrey}{\begin{minipage}{\textwidth}{\textbf{#1\vphantom{p\^{E}}}}\end{minipage}}}}
+\newcommand{\ressubheading}[4]{
+  \begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{#3} & \textit{#4} \\
+  \end{tabular*}\vspace{-6pt}}
+
+\begin{document}
+
+\newcommand{\mywebheader}{
+  \begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+    \textbf{\LARGE Peter Fogg} & \\
+    21 Calvin Street, Apt 3 & \href{mailto:peter.p.fogg@gmail.com}{peter.p.fogg@gmail.com} \\
+    Somerville, MA 02143 & 585-451-1004 \\
+  \end{tabular*}
+  \\
+  \vspace{0.1in}}
+
+\mywebheader
+
+\resheading{Education}
+\begin{itemize}
+\item
+  \ressubheading{Indiana University}{Bloomington, IN}{Ph.D in Computer Science}{September 2014 -- May 2015 (incomplete)}
+\item
+  \ressubheading{Oberlin College}{Oberlin, OH}{B.A in Computer Science}{September 2010 -- May 2014}
+  %% \begin{itemize}
+  %%   \resitem{Relevant coursework: Principles of Computer Science I (Java programming) and II (data structures and algorithms), Discrete Mathematics, Systems Programming (C, Unix), Programming Abstractions (Scheme, functional programming)}
+  %%   \resitem{Programming projects: wrote a Unix shell and created a Huffman compression program in C, and wrote an interpreter for a subset of Scheme in Scheme, among others}
+  %% \end{itemize}
+\end{itemize}
+
+\resheading{Work Experience}
+\begin{itemize}
+\item
+  \ressubheading{edX}{Cambridge, MA}{Software Engineer}{May 2015 -- present}
+  \begin{itemize}
+  \resitem{Implemented the backend and UI allowing learners to self-organize into teams, creating a "small group" education experience in the context of a MOOC. Helped to scale up edX's Ecommerce platform, including switching parts of the infrastructure from synchronous blocking network calls to an asynchronous task queue.}
+  \end{itemize}
+\item
+  \ressubheading{Indiana University}{Bloomington, IN}{Research Assistant}{September 2014 -- May 2015}
+  \begin{itemize}
+  \resitem{Co-author of \href{http://www.cs.indiana.edu/~rrnewton/papers/icfp15_adaptive_data.pdf}{\textit{Adaptive Lock-Free Maps: Purely-Functional to Scalable}}, ICFP '15}
+  \resitem{Co-author of \href{https://dl.acm.org/citation.cfm?id=2851142}{\textit{Parallel type-checking with haskell using saturating LVars and stream generators}}, PPOPP '16}
+  \resitem{Implemented novel data structures for the \href{http://github.com/iu-parfunc/lvars}{LVish library}}
+  \end{itemize}
+\item
+  \ressubheading{edX}{Cambridge, MA}{Engineering Intern}{June 2013 -- August 2013}
+  \begin{itemize}
+  \resitem{Worked closely with the edX Studio team to implement various improvements to the usability of the platform}
+  \end{itemize}
+\item
+  \ressubheading{Oberlin College}{Oberlin, OH}{Grader}{February 2013 -- May 2014}
+  \begin{itemize}
+    \resitem{Graded weekly lab assignments for CS151, Data Structures and Algorithms, and later CS280, Introduction to Algorithms}
+    \resitem{Examined code to determine where and why it failed and to assign partial credit}
+  \end{itemize}
+\item
+  \ressubheading{Oberlin College}{Oberlin, OH}{Workshop Leader}{September 2012 -- December 2012, September 2013 -- December 2013}
+  \begin{itemize}
+    \resitem{Planned and lead a workshop intended to supplement Introduction to Algorithms}
+    \resitem{Worked to strengthen student's understanding of algorithmic techniques and their mathematical background}
+  \end{itemize}
+\item
+  \ressubheading{Apatapa}{San Francisco, CA}{Lead iOS/Django developer}{June 2012 -- August 2012}
+  \begin{itemize}
+    \resitem{Helped to design and develop an iOS application, its backend, and associated website}
+    \resitem{Brought several key features from start to completion}
+  \end{itemize}
+\item
+  \ressubheading{Oberlin College}{Oberlin, OH}{Tutor}{October 2011 -- May 2014}
+  \begin{itemize}
+    \resitem{Tutored students in introductory computer science classes, explaining concepts such as recursion, object-oriented programming, and debugging}
+    \resitem{Assisted students in upper-level classes with learning new languages, etc.}
+  \end{itemize}
+\item
+  \ressubheading{Oberlin College}{Oberlin, OH}{Lab Helper}{September 2011 -- May 2012}
+  \begin{itemize}
+    \resitem{Helped students in lab with programming assignments---pointing out simple problems, giving design advice, assisting with more complicated debugging}
+  \end{itemize}
+\item
+  \ressubheading{University of Rochester}{Rochester, NY}{Summer Intern}{June 2011 -- August 2011}
+  \begin{itemize}
+    \resitem{Benchmarked Blue Gene/P and Beowulf cluster supercomputers, using Amber and GAUSSIAN programs}
+  \end{itemize}
+\end{itemize}
+
+\resheading{Skills}
+\begin{itemize}
+\item
+  \textbf{Programming Languages:} Python, Haskell, Javascript, Clojure, Java, Scheme
+\item
+  \textbf{Frameworks:} Django, Backbone, Unity
+\item
+  \textbf{Operating Systems:} Unix, Mac OS X
+\item
+  \textbf{Other:} git, MySQL,  \LaTeX, test-driven development
+\end{itemize}
+
+\resheading{Other}
+\begin{itemize}
+\item \href{https://github.com/peter-fogg}{Github}
+\item \href{http://peter-fogg.com}{peter-fogg.com}
+\end{itemize}
+\end{document}
