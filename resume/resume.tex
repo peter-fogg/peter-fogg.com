@@ -12,7 +12,7 @@
 
 %-----------------------------------------------------------
 \usepackage{fontspec}
-\setmainfont{Adobe Garamond Pro}
+% \setmainfont{Adobe Garamond Pro}
 \usepackage[empty]{fullpage}
 \usepackage{hyperref}
 \hypersetup{
@@ -23,8 +23,8 @@
   urlcolor=blue     % can put red here to visualize the links
 }
 \urlstyle{same}
-\definecolor{mygrey}{gray}{.85}
-\definecolor{mygreylink}{gray}{.30}
+% \definecolor{mygrey}{gray}{.85}
+% \definecolor{mygreylink}{gray}{.30}
 \textheight=9.0in
 \raggedbottom
 \raggedright
@@ -39,7 +39,7 @@
 
 %Custom commands
 \newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
-\newcommand{\resheading}[1]{{\large\colorbox{mygrey}{\begin{minipage}{\textwidth}{\textbf{#1\vphantom{p\^{E}}}}\end{minipage}}}}
+\newcommand{\resheading}[1]{{\large{\begin{minipage}{\textwidth}{\textbf{#1\vphantom{p\^{E}}}}\end{minipage}}}}
 \newcommand{\ressubheading}[4]{
   \begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
     \textbf{#1} & #2 \\
@@ -50,9 +50,9 @@
 
 \newcommand{\mywebheader}{
   \begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
-    \textbf{\LARGE Peter Fogg} & \href{http://peter-fogg.com}{peter-fogg.com} \\
-    21 Calvin Street, Apt 3 &  \href{mailto:peter.p.fogg@gmail.com}{peter.p.fogg@gmail.com} \\
-    Somerville, MA 02143 & 585-451-1004
+    \textbf{\LARGE Peter Fogg} & \\
+    PO Box 719 &  \href{mailto:peter.p.fogg@gmail.com}{peter.p.fogg@gmail.com} \\
+    Telluride, CO 81435 & 585-451-1004
   \end{tabular*}
   \\
   \vspace{0.1in}}
@@ -62,9 +62,16 @@
 \resheading{Work Experience}
 \begin{itemize}
 \item
-  \ressubheading{edX}{Cambridge, MA}{Software Engineer}{May 2015 -- present}
+  \ressubheading{MBTA}{Boston, MA}{Software Engineer}{June 2016 -- August 2017}
   \begin{itemize}
-  \resitem{Implemented the backend and UI allowing learners to self-organize into teams, creating a "small group" education experience in the context of a MOOC. Helped to scale up edX's Ecommerce platform, including switching parts of the infrastructure from synchronous blocking network calls to an asynchronous task queue.}
+    \resitem{Contributed to design and implementation of new \href{https://mbta.com/}{mbta.com} website}
+    \resitem{Implemented new real-time tracking and announcement system for trains}
+  \end{itemize}
+\item
+  \ressubheading{edX}{Cambridge, MA}{Software Engineer}{May 2015 -- June 2016}
+  \begin{itemize}
+    \resitem{Implemented the backend and UI allowing learners to self-organize into teams, creating a "small group" education experience in the context of a MOOC.}
+    \resitem{Helped to scale up edX's e-commerce platform, including switching parts of the infrastructure from synchronous blocking network calls to an asynchronous task queue.}
   \end{itemize}
 \item
   \ressubheading{Indiana University}{Bloomington, IN}{Research Assistant}{September 2014 -- May 2015}
@@ -103,9 +110,9 @@
 \resheading{Skills}
 \begin{itemize}
 \item
-  \textbf{Programming Languages:} Python, Haskell, Javascript, Clojure, Java, Scheme
+  \textbf{Programming Languages:} Python, Haskell, Javascript, Java, Scheme, Elixir
 \item
-  \textbf{Frameworks:} Django, Backbone, Unity
+  \textbf{Frameworks:} Django, Backbone
 \item
   \textbf{Operating Systems:} Unix, Mac OS X
 \item
